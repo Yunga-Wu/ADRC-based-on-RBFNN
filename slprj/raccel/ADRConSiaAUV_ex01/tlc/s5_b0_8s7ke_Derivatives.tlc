@@ -1,0 +1,70 @@
+%implements s5_b0_8s7ke_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+XDot *_rtXdot;
+uint32_T ri;
+%closefile localVarDecl
+%assign tlcDerivativesFcnOfS2B8 = OpaqueTLCBlockFcn("Derivatives", 2, 8, 2, 5, 0)
+_rtXdot = %<(SLibCG_SE(SLibGetContStatesDerivativeStructPtr()))>;
+memcpy(&_rtXdot->f5yk5ifwi3[0], &rtB.piixa31gb1.edtdpjtpxe[0], 12U * sizeof(real_T));
+memcpy(&_rtXdot->ebmugdzbj5[0], &rtB.a3eyo3a2sc.edtdpjtpxe[0], 12U * sizeof(real_T));
+memcpy(&_rtXdot->knvmw1t5nu[0], &rtB.eira4itmbd.edtdpjtpxe[0], 12U * sizeof(real_T));
+_rtXdot->hubmm4zl0p[0] = 0.0;
+_rtXdot->hubmm4zl0p[1] = 0.0;
+_rtXdot->hubmm4zl0p[2] = 0.0;
+for (ri = rtP.StateSpace_A_jc[0U]; ri < rtP.StateSpace_A_jc[1U]; ri++) {
+    _rtXdot->hubmm4zl0p[rtP.StateSpace_A_ir[ri]] += rtP.StateSpace_A_pr[ri] * rtX.hubmm4zl0p[0U];
+}
+for (ri = rtP.StateSpace_A_jc[1U]; ri < rtP.StateSpace_A_jc[2U]; ri++) {
+    _rtXdot->hubmm4zl0p[rtP.StateSpace_A_ir[ri]] += rtP.StateSpace_A_pr[ri] * rtX.hubmm4zl0p[1U];
+}
+for (ri = rtP.StateSpace_A_jc[2U]; ri < rtP.StateSpace_A_jc[3U]; ri++) {
+    _rtXdot->hubmm4zl0p[rtP.StateSpace_A_ir[ri]] += rtP.StateSpace_A_pr[ri] * rtX.hubmm4zl0p[2U];
+}
+for (ri = rtP.StateSpace_B_jc[0U]; ri < rtP.StateSpace_B_jc[1U]; ri++) {
+    _rtXdot->hubmm4zl0p[rtP.StateSpace_B_ir[ri]] += rtP.StateSpace_B_pr[ri] * rtB.mahvwaxgka[0U];
+}
+for (ri = rtP.StateSpace_B_jc[1U]; ri < rtP.StateSpace_B_jc[2U]; ri++) {
+    _rtXdot->hubmm4zl0p[rtP.StateSpace_B_ir[ri]] += rtP.StateSpace_B_pr[ri] * rtB.mahvwaxgka[1U];
+}
+_rtXdot->jjufwbkcuu = rtB.f1upxxvy1e;
+_rtXdot->evlwpyrw1j = rtB.bljdsvuybk.dbshcebiql;
+%<tlcDerivativesFcnOfS2B8>\
+_rtXdot->cupljohx0r[0] = 0.0;
+_rtXdot->cupljohx0r[1] = 0.0;
+_rtXdot->cupljohx0r[2] = 0.0;
+for (ri = rtP.StateSpace_A_jc_b5cwsz1eun[0U]; ri < rtP.StateSpace_A_jc_b5cwsz1eun[1U]; ri++) {
+    _rtXdot->cupljohx0r[rtP.StateSpace_A_ir_aez3opehch[ri]] += rtP.StateSpace_A_pr_eexuoq44yo[ri] * rtX.cupljohx0r[0U];
+}
+for (ri = rtP.StateSpace_A_jc_b5cwsz1eun[1U]; ri < rtP.StateSpace_A_jc_b5cwsz1eun[2U]; ri++) {
+    _rtXdot->cupljohx0r[rtP.StateSpace_A_ir_aez3opehch[ri]] += rtP.StateSpace_A_pr_eexuoq44yo[ri] * rtX.cupljohx0r[1U];
+}
+for (ri = rtP.StateSpace_A_jc_b5cwsz1eun[2U]; ri < rtP.StateSpace_A_jc_b5cwsz1eun[3U]; ri++) {
+    _rtXdot->cupljohx0r[rtP.StateSpace_A_ir_aez3opehch[ri]] += rtP.StateSpace_A_pr_eexuoq44yo[ri] * rtX.cupljohx0r[2U];
+}
+for (ri = rtP.StateSpace_B_jc_hg5rbdlama[0U]; ri < rtP.StateSpace_B_jc_hg5rbdlama[1U]; ri++) {
+    _rtXdot->cupljohx0r[rtP.StateSpace_B_ir_lcbdimog3b[ri]] += rtP.StateSpace_B_pr_j4jjtyks24[ri] * rtB.mahvwaxgka4[0U];
+}
+for (ri = rtP.StateSpace_B_jc_hg5rbdlama[1U]; ri < rtP.StateSpace_B_jc_hg5rbdlama[2U]; ri++) {
+    _rtXdot->cupljohx0r[rtP.StateSpace_B_ir_lcbdimog3b[ri]] += rtP.StateSpace_B_pr_j4jjtyks24[ri] * rtB.mahvwaxgka4[1U];
+}
+_rtXdot->b35cckfq4o = rtB.ogv05uqvct;
+_rtXdot->bkks2fqomt = rtB.dut040ommj.dbshcebiql;
+_rtXdot->c3mjdfgfc3 = rtB.nw2m2umewh;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedDerivativeLocalVars", localVarDecl)>
+%endfunction
+%function DerivativesFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Derivatives(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 5, fcnProtoType)>
+%endfunction

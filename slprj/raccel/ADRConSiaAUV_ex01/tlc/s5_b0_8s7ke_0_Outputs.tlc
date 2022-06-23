@@ -1,0 +1,56 @@
+%implements s5_b0_8s7ke_0_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T a0;
+real_T d;
+real_T y;
+%closefile localVarDecl
+%<SLibGenerateExtModeOutput(system)>
+d = ljyor1r0f3 * ljyor1r0f3 * pc2hqpos1l;
+a0 = ljyor1r0f3 * aepf3ltcyy;
+y = npceikahrk + a0;
+a0 = ((muDoubleScalarSqrt((8.0 * muDoubleScalarAbs(y) + d) * d) - d) * muDoubleScalarSign(y) / 2.0 + a0) * (1.0 - (muDoubleScalarSign(y + d) - muDoubleScalarSign(y - d)) / 2.0) + (muDoubleScalarSign(y + d) - muDoubleScalarSign(y - d)) * (a0 + y) / 2.0;
+localB->dbshcebiql = a0 / d * -pc2hqpos1l * (muDoubleScalarSign(a0 + d) - muDoubleScalarSign(a0 - d)) / 2.0 - (1.0 - (muDoubleScalarSign(a0 + d) - muDoubleScalarSign(a0 - d)) / 2.0) * (pc2hqpos1l * muDoubleScalarSign(a0));
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(0, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(0, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void nnqm3jve02(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 0, 0)
+%<comma>%<::tSimStructType> *rtS_p\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("nnqm3jve02", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>real_T npceikahrk\
+%assign comma = ", "
+%<comma>real_T aepf3ltcyy\
+%assign comma = ", "
+%<comma>real_T pc2hqpos1l\
+%assign comma = ", "
+%<comma>real_T ljyor1r0f3\
+%assign comma = ", "
+%<comma>lnt2xqlfzv *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction

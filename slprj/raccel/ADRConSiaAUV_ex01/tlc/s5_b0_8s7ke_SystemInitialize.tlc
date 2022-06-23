@@ -1,0 +1,109 @@
+%implements s5_b0_8s7ke_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+boolean_T tmp;
+%closefile localVarDecl
+%assign tlcInitializeConditionsFcnOfS2B8 = OpaqueTLCBlockFcn("InitializeConditions", 2, 8, 2, 1, 0)
+%<SLibGetRootInportsFromFile(system, TLC_TRUE)>
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+rtDW.eamihwyfrm = 1;
+if (%<(LibIsFirstInitCond())>) {
+    rtX.f5yk5ifwi3[0] = 0.0;
+    rtX.f5yk5ifwi3[1] = 0.0;
+    rtX.f5yk5ifwi3[2] = 0.0;
+    rtX.f5yk5ifwi3[3] = 0.0;
+    rtX.f5yk5ifwi3[4] = 0.0;
+    rtX.f5yk5ifwi3[5] = 0.0;
+    rtX.f5yk5ifwi3[6] = 0.0;
+    rtX.f5yk5ifwi3[7] = 0.0;
+    rtX.f5yk5ifwi3[8] = 50.0;
+    rtX.f5yk5ifwi3[9] = 0.0;
+    rtX.f5yk5ifwi3[10] = 0.0;
+    rtX.f5yk5ifwi3[11] = 0.0;
+    tmp = %<(SLibCG_SE(SLibIsRapidAccelSimulating()))>;
+    if (tmp) {
+        tmp = %<(SLibCG_SE(RTMGetGlobalInitialStatesAvailable()))>;
+        rtDW.eamihwyfrm = !tmp;
+    } else {
+        rtDW.eamihwyfrm = 1;
+    }
+    rtX.ebmugdzbj5[0] = 0.0;
+    rtX.ebmugdzbj5[1] = 0.0;
+    rtX.ebmugdzbj5[2] = 0.0;
+    rtX.ebmugdzbj5[3] = 0.0;
+    rtX.ebmugdzbj5[4] = 0.0;
+    rtX.ebmugdzbj5[5] = 0.0;
+    rtX.ebmugdzbj5[6] = 0.0;
+    rtX.ebmugdzbj5[7] = 0.0;
+    rtX.ebmugdzbj5[8] = 50.0;
+    rtX.ebmugdzbj5[9] = 0.0;
+    rtX.ebmugdzbj5[10] = 0.0;
+    rtX.ebmugdzbj5[11] = 0.0;
+}
+rtDW.geu5buqgj0 = 1;
+if (%<(LibIsFirstInitCond())>) {
+    tmp = %<(SLibCG_SE(SLibIsRapidAccelSimulating()))>;
+    if (tmp) {
+        tmp = %<(SLibCG_SE(RTMGetGlobalInitialStatesAvailable()))>;
+        rtDW.geu5buqgj0 = !tmp;
+    } else {
+        rtDW.geu5buqgj0 = 1;
+    }
+    rtX.knvmw1t5nu[0] = 0.0;
+    rtX.knvmw1t5nu[1] = 0.0;
+    rtX.knvmw1t5nu[2] = 0.0;
+    rtX.knvmw1t5nu[3] = 0.0;
+    rtX.knvmw1t5nu[4] = 0.0;
+    rtX.knvmw1t5nu[5] = 0.0;
+    rtX.knvmw1t5nu[6] = 0.0;
+    rtX.knvmw1t5nu[7] = 0.0;
+    rtX.knvmw1t5nu[8] = 50.0;
+    rtX.knvmw1t5nu[9] = 0.0;
+    rtX.knvmw1t5nu[10] = 0.0;
+    rtX.knvmw1t5nu[11] = 0.0;
+}
+rtDW.cc0q040e31 = 1;
+if (%<(LibIsFirstInitCond())>) {
+    tmp = %<(SLibCG_SE(SLibIsRapidAccelSimulating()))>;
+    if (tmp) {
+        tmp = %<(SLibCG_SE(RTMGetGlobalInitialStatesAvailable()))>;
+        rtDW.cc0q040e31 = !tmp;
+    } else {
+        rtDW.cc0q040e31 = 1;
+    }
+}
+rtX.hubmm4zl0p[0] = rtP.StateSpace_InitialCondition;
+rtX.hubmm4zl0p[1] = rtP.StateSpace_InitialCondition;
+rtX.hubmm4zl0p[2] = rtP.StateSpace_InitialCondition;
+rtX.jjufwbkcuu = rtP.Integrator1_IC;
+rtX.evlwpyrw1j = rtP.Integrator_IC;
+%<tlcInitializeConditionsFcnOfS2B8>\
+rtDW.h45vn10pnz = rtP.Output_InitialCondition;
+rtX.cupljohx0r[0] = rtP.StateSpace_InitialCondition_lvsbdwxj2h;
+rtX.cupljohx0r[1] = rtP.StateSpace_InitialCondition_lvsbdwxj2h;
+rtX.cupljohx0r[2] = rtP.StateSpace_InitialCondition_lvsbdwxj2h;
+rtX.b35cckfq4o = rtP.Integrator1_IC_cbqhoack0n;
+rtX.bkks2fqomt = rtP.Integrator_IC_iw1gf5olhq;
+rtX.c3mjdfgfc3 = rtP.Integrator_IC_lix0ln5qlw;
+rtDW.hgzgcuqa5r = %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>;
+rtDW.bo4ydxes1r = %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>;
+rtDW.gwytndyxrb = rtP.Output_InitialCondition_pilzckzbr5;
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 1, fcnProtoType)>
+%endfunction

@@ -1,0 +1,207 @@
+%implements s5_b0_8s7ke_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T ui[7];
+real_T FbBL;
+real_T FbBR;
+real_T FbS;
+real_T FhB;
+real_T FhS;
+real_T FsL;
+real_T FsR;
+real_T K;
+real_T X_p;
+real_T Y;
+real_T Z;
+real_T c1;
+real_T c2;
+real_T c3;
+real_T e_x;
+real_T h_x;
+real_T i_x;
+real_T s1;
+real_T s2;
+real_T s3;
+real_T t2;
+int32_T i;
+int16_T max_ui[7];
+int16_T max_ui_p;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(1,1,11,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,10,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,9,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,8,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,7,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,6,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,5,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,4,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,3,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,2,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,1,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(1,1,0,1)
+%<SLibCG_AccessArg(1 ,1, 0)>
+%endif
+
+%<SLibGenerateExtModeOutput(system)>
+ui[0] = me0moqv5c4;
+ui[1] = me0moqv5c4;
+ui[2] = bcsrmzfffg;
+ui[3] = mjlvhhij4n;
+ui[4] = gpknwmdigv;
+ui[5] = imgyxrneh3;
+ui[6] = hzlfxruw0h;
+max_ui[0] = 1100;
+max_ui[1] = 1100;
+max_ui[2] = 1000;
+max_ui[3] = 1000;
+max_ui[4] = 1000;
+max_ui[5] = 1000;
+max_ui[6] = 1000;
+for (i = 0; i < 7; i++) {
+    c1 = ui[i];
+    max_ui_p = max_ui[i];
+    if (muDoubleScalarAbs(c1) > max_ui_p) {
+        c1 = muDoubleScalarSign(c1) * (real_T)max_ui_p;
+    }
+    ui[i] = c1;
+}
+c1 = muDoubleScalarCos(k3ydt41gcy[9]);
+c2 = muDoubleScalarCos(k3ydt41gcy[10]);
+c3 = muDoubleScalarCos(k3ydt41gcy[11]);
+s1 = muDoubleScalarSin(k3ydt41gcy[9]);
+s2 = muDoubleScalarSin(k3ydt41gcy[10]);
+s3 = muDoubleScalarSin(k3ydt41gcy[11]);
+t2 = muDoubleScalarTan(k3ydt41gcy[10]);
+FsL = (-0.0 - 0.0 * ui[0]) + ui[0] * ui[0] * 0.052;
+FsR = (-0.0 - 0.0 * ui[1]) + ui[1] * ui[1] * 0.052;
+FhB = (ui[2] * ui[2] * 4.4051E-7 + 5.6924E-8 * muDoubleScalarPower(ui[2], 3.0)) + 0.0237 * ui[2];
+FhS = (ui[3] * ui[3] * 4.4051E-7 + 5.6924E-8 * muDoubleScalarPower(ui[3], 3.0)) + 0.0237 * ui[3];
+FbBL = (ui[4] * ui[4] * 4.4051E-7 + 5.6924E-8 * muDoubleScalarPower(ui[4], 3.0)) + 0.0237 * ui[4];
+FbBR = (ui[5] * ui[5] * 4.4051E-7 + 5.6924E-8 * muDoubleScalarPower(ui[5], 3.0)) + 0.0237 * ui[5];
+FbS = (ui[6] * ui[6] * 4.4051E-7 + 5.6924E-8 * muDoubleScalarPower(ui[6], 3.0)) + 0.0237 * ui[6];
+X_p = ((((((k3ydt41gcy[4] * k3ydt41gcy[4] * -6.722E-5 + k3ydt41gcy[5] * k3ydt41gcy[5] * -0.00506367) + 0.01083937 * k3ydt41gcy[5] * k3ydt41gcy[3]) * 38078.234044732904 + (0.04675933 * k3ydt41gcy[1] * k3ydt41gcy[5] + -0.0657415 * k3ydt41gcy[2] * k3ydt41gcy[4]) * 12978.266545580402) + ((k3ydt41gcy[0] * k3ydt41gcy[0] * -0.0175582 + k3ydt41gcy[1] * k3ydt41gcy[1] * -0.0389615) + k3ydt41gcy[2] * k3ydt41gcy[2] * -0.00467582) * 4423.4037306000009) - 0.0 * s2) + (FsL + FsR) * 0.97437006478523525) - ((((-k3ydt41gcy[1] * k3ydt41gcy[5] + k3ydt41gcy[2] * k3ydt41gcy[4]) - (k3ydt41gcy[4] * k3ydt41gcy[4] + k3ydt41gcy[5] * k3ydt41gcy[5]) * 0.0) + 0.0 * k3ydt41gcy[3] * k3ydt41gcy[4]) + 0.012 * k3ydt41gcy[3] * k3ydt41gcy[5]) * 1207.4;
+Y = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&Y", "rtS_i"], 1, 1, 0))>;
+Z = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&Z", "rtS_i"], 1, 1, 1))>;
+Y = ((((((((((0.00739663 * k3ydt41gcy[3] * muDoubleScalarAbs(k3ydt41gcy[3]) + -0.0111071 * k3ydt41gcy[3] * k3ydt41gcy[4]) + -0.00171998 * k3ydt41gcy[4] * k3ydt41gcy[5]) * 38078.234044732904 + ((0.006692951 * k3ydt41gcy[1] * k3ydt41gcy[4] + 0.1145256 * k3ydt41gcy[2] * k3ydt41gcy[3]) + -0.0040379 * k3ydt41gcy[2] * k3ydt41gcy[5]) * 12978.266545580402) + (-0.0205011 * k3ydt41gcy[1] / (muDoubleScalarAbs(k3ydt41gcy[1]) + 2.2204460492503131E-16) * muDoubleScalarAbs(Y) * muDoubleScalarAbs(k3ydt41gcy[5]) + (0.01841458 * k3ydt41gcy[0] * k3ydt41gcy[5] + -0.00358749 * k3ydt41gcy[0] * k3ydt41gcy[3])) * 12978.266545580402) + ((k3ydt41gcy[0] * k3ydt41gcy[0] * 0.000351169 + -0.114848 * k3ydt41gcy[0] * k3ydt41gcy[1]) + -0.0742288 * k3ydt41gcy[1] * muDoubleScalarAbs(Z)) * 12978.266545580402) + -55.855203587032328 * k3ydt41gcy[1] * k3ydt41gcy[2]) + 0.0 * c2 * s1) + FhB) + FhS) + (FsL - FsR) * 0.224951054343865) - ((((-k3ydt41gcy[2] * k3ydt41gcy[3] + k3ydt41gcy[0] * k3ydt41gcy[5]) - (k3ydt41gcy[5] * k3ydt41gcy[5] + k3ydt41gcy[3] * k3ydt41gcy[3]) * 0.0) + 0.012 * k3ydt41gcy[4] * k3ydt41gcy[5]) + 0.0 * k3ydt41gcy[4] * k3ydt41gcy[3]) * 1207.4;
+Z = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&Z", "rtS_i"], 1, 1, 2))>;
+K = k3ydt41gcy[2] * k3ydt41gcy[2] + k3ydt41gcy[1] * k3ydt41gcy[1];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&K", "rtS_i"], 1, 1, 3))>;
+e_x = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&e_x", "rtS_i"], 1, 1, 4))>;
+Z = ((((((((((k3ydt41gcy[3] * k3ydt41gcy[3] * 0.003354883 + k3ydt41gcy[5] * k3ydt41gcy[5] * -0.00253649) + 0.0141277 * k3ydt41gcy[5] * k3ydt41gcy[3]) * 38078.234044732904 + (-0.00783261 * k3ydt41gcy[1] * k3ydt41gcy[5] + -0.0840462 * k3ydt41gcy[1] * k3ydt41gcy[3]) * 12978.266545580402) + (-0.0649351 * k3ydt41gcy[2] / (muDoubleScalarAbs(k3ydt41gcy[2]) + 2.2204460492503131E-16) * muDoubleScalarAbs(Z) * muDoubleScalarAbs(k3ydt41gcy[4]) + -0.0466785 * k3ydt41gcy[0] * k3ydt41gcy[4]) * 12978.266545580402) + ((k3ydt41gcy[0] * k3ydt41gcy[0] * 0.004880111 + -0.191277 * k3ydt41gcy[0] * k3ydt41gcy[2]) + -0.133053 * k3ydt41gcy[2] * muDoubleScalarAbs(K)) * 4423.4037306000009) + (((-0.00370547 * k3ydt41gcy[0] * k3ydt41gcy[1] + -0.00138329 * k3ydt41gcy[0] * muDoubleScalarAbs(k3ydt41gcy[2])) + -0.0102749 * muDoubleScalarAbs(k3ydt41gcy[2]) * muDoubleScalarAbs(e_x)) + k3ydt41gcy[1] * k3ydt41gcy[1] * 0.00755362) * 4423.4037306000009) + 0.0 * c2 * c1) + FbBL) + FbBR) + FbS) - ((((-k3ydt41gcy[0] * k3ydt41gcy[4] + k3ydt41gcy[1] * k3ydt41gcy[3]) - (k3ydt41gcy[3] * k3ydt41gcy[3] + k3ydt41gcy[4] * k3ydt41gcy[4]) * 0.012) + 0.0 * k3ydt41gcy[5] * k3ydt41gcy[3]) + 0.0 * k3ydt41gcy[5] * k3ydt41gcy[4]) * 1207.4;
+K = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&K", "rtS_i"], 1, 1, 5))>;
+K = ((((((((((((((-0.00194209 * k3ydt41gcy[0] * k3ydt41gcy[3] + -0.00039165 * k3ydt41gcy[0] * k3ydt41gcy[5]) + -0.00101474 * k3ydt41gcy[1] * k3ydt41gcy[4]) + -0.00193344 * k3ydt41gcy[2] * k3ydt41gcy[3]) + 0.001474016 * k3ydt41gcy[2] * k3ydt41gcy[5]) * 38078.234044732904 + ((0.002357583 * k3ydt41gcy[4] * k3ydt41gcy[5] + 9.1453E-5 * k3ydt41gcy[3] * k3ydt41gcy[4]) + 0.000187666 * k3ydt41gcy[3] * muDoubleScalarAbs(k3ydt41gcy[3])) * 111721.53868724636) + (((k3ydt41gcy[0] * k3ydt41gcy[0] * -2.3E-7 + 0.001123393 * k3ydt41gcy[0] * k3ydt41gcy[1]) + -0.00164839 * k3ydt41gcy[1] * muDoubleScalarAbs(K)) + -0.0663314 * k3ydt41gcy[1] * k3ydt41gcy[2]) * 12978.266545580402) + 0.0 * c2 * c1) - 141.69024000000002 * c2 * s1) + FbBL * 0.347) - FbBR * 0.347) - 43.07000000000005 * k3ydt41gcy[4] * k3ydt41gcy[5]) + k3ydt41gcy[3] * k3ydt41gcy[4] * -0.158) - (k3ydt41gcy[5] * k3ydt41gcy[5] - k3ydt41gcy[4] * k3ydt41gcy[4]) * 0.0) - k3ydt41gcy[3] * k3ydt41gcy[5] * 0.0) - ((-k3ydt41gcy[0] * k3ydt41gcy[4] + k3ydt41gcy[1] * k3ydt41gcy[3]) * 0.0 - (-k3ydt41gcy[2] * k3ydt41gcy[3] + k3ydt41gcy[0] * k3ydt41gcy[5]) * 0.012) * 1207.4;
+e_x = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&e_x", "rtS_i"], 1, 1, 6))>;
+h_x = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&h_x", "rtS_i"], 1, 1, 7))>;
+i_x = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&i_x", "rtS_i"], 1, 1, 8))>;
+FbBL = (((((((((((((((k3ydt41gcy[3] * k3ydt41gcy[3] * 0.002843382 + k3ydt41gcy[5] * k3ydt41gcy[5] * -0.00098189) + 0.005209237 * k3ydt41gcy[5] * k3ydt41gcy[3]) + -0.0027554 * k3ydt41gcy[4] * muDoubleScalarAbs(k3ydt41gcy[4])) * 111721.53868724636 + (((-0.00332664 * k3ydt41gcy[1] * k3ydt41gcy[5] + -0.0110556 * k3ydt41gcy[1] * k3ydt41gcy[3]) + -0.0256643 * k3ydt41gcy[0] * k3ydt41gcy[4]) + -0.00491085 * muDoubleScalarAbs(e_x) * k3ydt41gcy[4]) * 38078.234044732904) + ((k3ydt41gcy[0] * k3ydt41gcy[0] * 0.001420507 + 0.05430752 * k3ydt41gcy[0] * k3ydt41gcy[2]) + -0.029405 * k3ydt41gcy[2] * muDoubleScalarAbs(h_x)) * 12978.266545580402) + ((-7.22E-5 * k3ydt41gcy[0] * muDoubleScalarAbs(k3ydt41gcy[2]) + 0.003375474 * muDoubleScalarAbs(k3ydt41gcy[2]) * muDoubleScalarAbs(i_x)) + k3ydt41gcy[1] * k3ydt41gcy[1] * -0.00081596) * 12978.266545580402) - 0.0 * c1 * c2) - 141.69024000000002 * s2) - FbS * 1.15) + FbBL * 0.884) + FbBR * 0.884) - -555.46 * k3ydt41gcy[5] * k3ydt41gcy[3]) + k3ydt41gcy[4] * k3ydt41gcy[5] * 0.0) - (k3ydt41gcy[3] * k3ydt41gcy[3] - k3ydt41gcy[5] * k3ydt41gcy[5]) * -0.158) - k3ydt41gcy[3] * k3ydt41gcy[4] * 0.0) - ((-k3ydt41gcy[1] * k3ydt41gcy[5] + k3ydt41gcy[2] * k3ydt41gcy[4]) * 0.012 - (-k3ydt41gcy[0] * k3ydt41gcy[4] + k3ydt41gcy[1] * k3ydt41gcy[3]) * 0.0) * 1207.4;
+FbBR = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&FbBR", "rtS_i"], 1, 1, 9))>;
+FbS = k3ydt41gcy[1] * k3ydt41gcy[1] + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&FbS", "rtS_i"], 1, 1, 10))>;
+FsL = (((((((((((((((-0.00129065 * k3ydt41gcy[3] * k3ydt41gcy[4] + -0.0015022 * k3ydt41gcy[4] * k3ydt41gcy[5]) + -0.00322266 * k3ydt41gcy[5] * muDoubleScalarAbs(k3ydt41gcy[5])) * 111721.53868724636 + ((-0.00339053 * k3ydt41gcy[2] * k3ydt41gcy[5] + 0.000299687 * k3ydt41gcy[2] * k3ydt41gcy[3]) + -0.00070204 * k3ydt41gcy[1] * k3ydt41gcy[4]) * 38078.234044732904) + ((-0.00162993 * k3ydt41gcy[0] * k3ydt41gcy[3] + -0.0152076 * k3ydt41gcy[0] * k3ydt41gcy[5]) + 0.004579522 * muDoubleScalarAbs(FbBR) * k3ydt41gcy[5]) * 38078.234044732904) + (((k3ydt41gcy[0] * k3ydt41gcy[0] * -4.856E-5 + -0.0135556 * k3ydt41gcy[0] * k3ydt41gcy[1]) + 0.01228311 * k3ydt41gcy[1] * muDoubleScalarAbs(FbS)) + 0.003997094 * k3ydt41gcy[1] * k3ydt41gcy[2]) * 12978.266545580402) + 0.0 * c2 * s1) + 0.0 * s2) + FhB * 0.672) - FhS * 0.628) + (FsL - FsR) * 0.26 * 0.97437006478523525) - (FsL - FsR) * 1.53 * 0.224951054343865) - 512.39 * k3ydt41gcy[3] * k3ydt41gcy[4]) + k3ydt41gcy[3] * k3ydt41gcy[5] * 0.0) - (k3ydt41gcy[4] * k3ydt41gcy[4] - k3ydt41gcy[3] * k3ydt41gcy[3]) * 0.0) - k3ydt41gcy[4] * k3ydt41gcy[5] * -0.158) - ((-k3ydt41gcy[2] * k3ydt41gcy[3] + k3ydt41gcy[0] * k3ydt41gcy[5]) * 0.0 - (-k3ydt41gcy[1] * k3ydt41gcy[5] + k3ydt41gcy[2] * k3ydt41gcy[4]) * 0.0) * 1207.4;
+FsR = (k3ydt41gcy[0] * k3ydt41gcy[0] + k3ydt41gcy[1] * k3ydt41gcy[1]) + k3ydt41gcy[2] * k3ydt41gcy[2];
+%<(SLibCGCallSubFcn("fv3xdsfnd4", ["&FsR", "rtS_i"], 1, 1, 11))>;
+localB->edtdpjtpxe[0] = (0.000685 * X_p + 3.317E-7 * Z) - 7.667E-6 * FbBL;
+localB->edtdpjtpxe[1] = (0.0004858 * Y + 5.638E-5 * K) + 3.648E-5 * FsL;
+localB->edtdpjtpxe[2] = (2.774E-7 * X_p + 0.0003337 * Z) - 2.795E-5 * FbBL;
+localB->edtdpjtpxe[3] = (3.832E-5 * Y + 0.006571 * K) + 2.138E-5 * FsL;
+localB->edtdpjtpxe[4] = (-7.667E-6 * X_p - 3.342E-5 * Z) + 0.0007726 * FbBL;
+localB->edtdpjtpxe[5] = (3.814E-5 * Y + 7.66E-5 * K) + 0.0009541 * FsL;
+localB->edtdpjtpxe[6] = ((c3 * s2 * s1 - s3 * c1) * k3ydt41gcy[1] + c3 * c2 * k3ydt41gcy[0]) + (c3 * c1 * s2 + s3 * s1) * k3ydt41gcy[2];
+localB->edtdpjtpxe[7] = ((s1 * s2 * s3 + c1 * c3) * k3ydt41gcy[1] + s3 * c2 * k3ydt41gcy[0]) + (c1 * s2 * s3 - c3 * s1) * k3ydt41gcy[2];
+localB->edtdpjtpxe[8] = (c2 * s1 * k3ydt41gcy[1] + -s2 * k3ydt41gcy[0]) + c1 * c2 * k3ydt41gcy[2];
+localB->edtdpjtpxe[9] = (s1 * t2 * k3ydt41gcy[4] + k3ydt41gcy[3]) + c1 * t2 * k3ydt41gcy[5];
+localB->edtdpjtpxe[10] = c1 * k3ydt41gcy[4] - s1 * k3ydt41gcy[5];
+localB->edtdpjtpxe[11] = s1 / (c2 + 2.2204460492503131E-16) * k3ydt41gcy[4] + c1 / (c2 + 2.2204460492503131E-16) * k3ydt41gcy[5];
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(1, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void makpxgzl4j(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 1, 0)
+%<comma>%<::tSimStructType> *rtS_i\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("makpxgzl4j", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>const real_T k3ydt41gcy[12]\
+%assign comma = ", "
+%<comma>real_T me0moqv5c4\
+%assign comma = ", "
+%<comma>real_T bcsrmzfffg\
+%assign comma = ", "
+%<comma>real_T mjlvhhij4n\
+%assign comma = ", "
+%<comma>real_T gpknwmdigv\
+%assign comma = ", "
+%<comma>real_T imgyxrneh3\
+%assign comma = ", "
+%<comma>real_T hzlfxruw0h\
+%assign comma = ", "
+%<comma>cyqjo52rx5 *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 1, fcnProtoType)>
+%endfunction

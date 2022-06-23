@@ -1,0 +1,306 @@
+%implements s5_b0_8s7ke_Outputs "C"
+
+%function OutputsForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%<SLibCGIRAccessLocalVar(39, 0, "")> %% nxewyesg5z
+%<SLibCGIRAccessLocalVar(40, 0, "")> %% hjv234vjiv
+%<SLibCGIRAccessLocalVar(31, 0, "")> %% ag41fomznv
+%<SLibCGIRAccessLocalVar(41, 0, "")> %% gglngcp11h
+%<SLibCGIRAccessLocalVar(21, 0, "")> %% iqgeo3lw1h
+%<SLibCGIRAccessLocalVar(42, 0, "")> %% kxuzqeoz1t
+%<SLibCGIRAccessLocalVar(23, 0, "")> %% egoi4gu5sd
+%<SLibCGIRAccessLocalVar(33, 0, "")> %% b01z3pytil
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T ju42wuawwg[3];
+real_T ddnzdisoh5;
+real_T gyqmdbpukq;
+real_T nkm02eancy;
+real_T *lastU;
+int32_T i;
+uint32_T ri;
+uint8_T c1c3ifqvzj;
+boolean_T tmp;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%assign tlcOutputsFcnOfS2B0 = OpaqueTLCBlockFcn("Outputs", 2, 0, 2, 2, 0)
+%assign tlcOutputsFcnOfS2B1 = OpaqueTLCBlockFcn("Outputs", 2, 1, 2, 2, 1)
+%assign tlcOutputsFcnOfS2B2 = OpaqueTLCBlockFcn("Outputs", 2, 2, 2, 2, 2)
+%assign tlcOutputsFcnOfS2B3 = OpaqueTLCBlockFcn("Outputs", 2, 3, 2, 2, 3)
+%assign tlcOutputsFcnOfS2B4 = OpaqueTLCBlockFcn("Outputs", 2, 4, 2, 2, 4)
+%assign tlcOutputsFcnOfS2B5 = OpaqueTLCBlockFcn("Outputs", 2, 5, 2, 2, 5)
+%assign tlcOutputsFcnOfS2B6 = OpaqueTLCBlockFcn("Outputs", 2, 6, 2, 2, 6)
+%assign tlcOutputsFcnOfS2B7 = OpaqueTLCBlockFcn("Outputs", 2, 7, 2, 2, 7)
+%assign tlcOutputsFcnOfS2B8 = OpaqueTLCBlockFcn("Outputs", 2, 8, 2, 2, 8)
+%assign tlcOutputsFcnOfS2B9 = OpaqueTLCBlockFcn("Outputs", 2, 9, 2, 2, 9)
+%assign tlcOutputsFcnOfS2B10 = OpaqueTLCBlockFcn("Outputs", 2, 10, 2, 2, 10)
+%assign tlcOutputsFcnOfS2B11 = OpaqueTLCBlockFcn("Outputs", 2, 11, 2, 2, 11)
+%assign tlcOutputsFcnOfS2B12 = OpaqueTLCBlockFcn("Outputs", 2, 12, 2, 2, 12)
+%assign tlcOutputsFcnOfS2B14 = OpaqueTLCBlockFcn("Outputs", 2, 14, 2, 2, 13)
+%assign tlcOutputsFcnOfS2B16 = OpaqueTLCBlockFcn("Outputs", 2, 16, 2, 2, 14)
+%assign tlcOutputsFcnOfS2B18 = OpaqueTLCBlockFcn("Outputs", 2, 18, 2, 2, 15)
+%assign tlcOutputsFcnOfS2B20 = OpaqueTLCBlockFcn("Outputs", 2, 20, 2, 2, 16)
+%<SLibGetRootInportsFromFile(system, TLC_FALSE)>
+%<SLibGenerateExtModeOutput(system)>
+%<tlcOutputsFcnOfS2B0>\
+tmp = %<(SLibCG_SE(RTMGetIsOkayToUpdateMode()))>;
+for (i = 0; i < 12; i++) {
+    if (tmp) {
+        if (rtDW.eamihwyfrm != 0) {
+            rtX.f5yk5ifwi3[i] = rtB.mfdq3temlp[i];
+        }
+        rtB.auftxpgoho[i] = rtX.f5yk5ifwi3[i];
+    } else {
+        rtB.auftxpgoho[i] = rtX.f5yk5ifwi3[i];
+    }
+}
+rtB.ksjsftq1ct = (muDoubleScalarMod(rtP.Constant1_Value_ic1pdr0xay + rtB.auftxpgoho[11], rtP.Constant_Value_jdboq2iqct) - rtP.Constant1_Value_ic1pdr0xay) * rtP.Gain6_Gain;
+tmp = %<(SLibCG_SE(RTMGetIsOkayToUpdateMode()))>;
+for (i = 0; i < 12; i++) {
+    if (tmp) {
+        if (rtDW.geu5buqgj0 != 0) {
+            rtX.ebmugdzbj5[i] = rtB.mtx33k1mku[i];
+        }
+        rtB.bcruwxvgqg[i] = rtX.ebmugdzbj5[i];
+    } else {
+        rtB.bcruwxvgqg[i] = rtX.ebmugdzbj5[i];
+    }
+}
+rtB.mwnuzrhkhv = (muDoubleScalarMod(rtP.Constant1_Value_psjiuepagn + rtB.bcruwxvgqg[11], rtP.Constant_Value_e0u3xfttwi) - rtP.Constant1_Value_psjiuepagn) * rtP.Gain6_Gain_lpputchvhg;
+tmp = %<(SLibCG_SE(RTMGetIsOkayToUpdateMode()))>;
+for (i = 0; i < 12; i++) {
+    if (tmp) {
+        if (rtDW.cc0q040e31 != 0) {
+            rtX.knvmw1t5nu[i] = rtB.jqc23wrzcs[i];
+        }
+        rtB.iyvvk41hg5[i] = rtX.knvmw1t5nu[i];
+    } else {
+        rtB.iyvvk41hg5[i] = rtX.knvmw1t5nu[i];
+    }
+}
+rtB.ddaqma44qf = (muDoubleScalarMod(rtP.Constant1_Value_lwj4t0ftls + rtB.iyvvk41hg5[11], rtP.Constant_Value_pypgnutynv) - rtP.Constant1_Value_lwj4t0ftls) * rtP.Gain6_Gain_lhhabocsqp;
+if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+%<tlcOutputsFcnOfS2B1>\
+%<tlcOutputsFcnOfS2B2>\
+%<tlcOutputsFcnOfS2B3>\
+%<tlcOutputsFcnOfS2B4>\
+%<tlcOutputsFcnOfS2B5>\
+%<tlcOutputsFcnOfS2B6>\
+%<tlcOutputsFcnOfS2B7>\
+}
+ju42wuawwg[0] = 0.0;
+ju42wuawwg[1] = 0.0;
+ju42wuawwg[2] = 0.0;
+for (ri = rtP.StateSpace_C_jc[0U]; ri < rtP.StateSpace_C_jc[1U]; ri++) {
+    ju42wuawwg[rtP.StateSpace_C_ir[ri]] += rtP.StateSpace_C_pr[ri] * rtX.hubmm4zl0p[0U];
+}
+for (ri = rtP.StateSpace_C_jc[1U]; ri < rtP.StateSpace_C_jc[2U]; ri++) {
+    ju42wuawwg[rtP.StateSpace_C_ir[ri]] += rtP.StateSpace_C_pr[ri] * rtX.hubmm4zl0p[1U];
+}
+for (ri = rtP.StateSpace_C_jc[2U]; ri < rtP.StateSpace_C_jc[3U]; ri++) {
+    ju42wuawwg[rtP.StateSpace_C_ir[ri]] += rtP.StateSpace_C_pr[ri] * rtX.hubmm4zl0p[2U];
+}
+ddnzdisoh5 = rtP.Gain1_Gain * ju42wuawwg[1];
+gyqmdbpukq = rtX.jjufwbkcuu;
+rtB.h2s2pv5f4u = rtX.jjufwbkcuu - ju42wuawwg[0];
+rtB.f1upxxvy1e = rtX.evlwpyrw1j;
+rtB.brz0wzlxd4 = rtB.f1upxxvy1e - ju42wuawwg[1];
+rtB.cryrhf30s3[0] = rtB.h2s2pv5f4u;
+rtB.cryrhf30s3[1] = rtB.brz0wzlxd4;
+%<tlcOutputsFcnOfS2B8>\
+if (%<(SLibCGIRIsSampleHit(2, 2))>) {
+    c1c3ifqvzj = rtDW.h45vn10pnz;
+    rtB.gq2fn41oeb = rtP.Gain18_Gain * rtP.u_OutValues[rtDW.h45vn10pnz];
+}
+nkm02eancy = ((muDoubleScalarSin(rtP.u_Freq * %<(SLibCG_SE(LibGetTaskTime(0)))> + rtP.u_Phase) * rtP.u_Amp + rtP.u_Bias) * rtP.Gain19_Gain + rtB.gq2fn41oeb) * rtP.Gain7_Gain;
+iqgeo3lw1h = ((2.0 * rtP.wc * ddnzdisoh5 + rtP.kp_Gain * rtB.h2s2pv5f4u) - rtB.jzudu5qyay[1]) * (1.0 / rtP.b0) + nkm02eancy;
+rtB.mahvwaxgka[0] = rtP.b0 * iqgeo3lw1h;
+rtB.mahvwaxgka[1] = rtB.ddaqma44qf;
+if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+%<tlcOutputsFcnOfS2B9>\
+%<tlcOutputsFcnOfS2B10>\
+%<tlcOutputsFcnOfS2B11>\
+%<tlcOutputsFcnOfS2B12>\
+}
+egoi4gu5sd = gyqmdbpukq - rtB.ic40a3ky4z;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("nnqm3jve02",0,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("nnqm3jve02",0,1)
+%<SLibCGIRAccessLocalVar(23, 0, "")> %% egoi4gu5sd
+%endif
+
+%<SLibCGIRGenReusableSysCall("nnqm3jve02", ["%<_modelSS>", "egoi4gu5sd", "rtB.f1upxxvy1e", "rtP.r0", "rtP.h0", "&rtB.bljdsvuybk"], 0, 0, 6, 0, 6, 2)>\
+
+%endif
+ju42wuawwg[0] = 0.0;
+ju42wuawwg[1] = 0.0;
+ju42wuawwg[2] = 0.0;
+for (ri = rtP.StateSpace_C_jc_ezekuos4qq[0U]; ri < rtP.StateSpace_C_jc_ezekuos4qq[1U]; ri++) {
+    ju42wuawwg[rtP.StateSpace_C_ir_b14qcvyshk[ri]] += rtP.StateSpace_C_pr_eq55j4cmfj[ri] * rtX.cupljohx0r[0U];
+}
+for (ri = rtP.StateSpace_C_jc_ezekuos4qq[1U]; ri < rtP.StateSpace_C_jc_ezekuos4qq[2U]; ri++) {
+    ju42wuawwg[rtP.StateSpace_C_ir_b14qcvyshk[ri]] += rtP.StateSpace_C_pr_eq55j4cmfj[ri] * rtX.cupljohx0r[1U];
+}
+for (ri = rtP.StateSpace_C_jc_ezekuos4qq[2U]; ri < rtP.StateSpace_C_jc_ezekuos4qq[3U]; ri++) {
+    ju42wuawwg[rtP.StateSpace_C_ir_b14qcvyshk[ri]] += rtP.StateSpace_C_pr_eq55j4cmfj[ri] * rtX.cupljohx0r[2U];
+}
+rtB.cptujvcik4 = (((rtX.b35cckfq4o - ju42wuawwg[0]) * rtP.kp_Gain_ougc5dsbnm + 2.0 * rtP.wc * (rtP.Gain11_Gain * ju42wuawwg[1])) - ju42wuawwg[2]) * (1.0 / rtP.b0);
+if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+%<tlcOutputsFcnOfS2B14>\
+}
+ag41fomznv = rtB.cptujvcik4 + nkm02eancy;
+rtB.mahvwaxgka4[0] = rtP.b0 * ag41fomznv;
+rtB.mahvwaxgka4[1] = rtB.mwnuzrhkhv;
+b01z3pytil = rtX.b35cckfq4o - rtB.ic40a3ky4z;
+rtB.ogv05uqvct = rtX.bkks2fqomt;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("nnqm3jve02",0,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("nnqm3jve02",0,1)
+%<SLibCGIRAccessLocalVar(33, 0, "")> %% b01z3pytil
+%endif
+
+%<SLibCGIRGenReusableSysCall("nnqm3jve02", ["%<_modelSS>", "b01z3pytil", "rtB.ogv05uqvct", "rtP.r0", "rtP.h0", "&rtB.dut040ommj"], 0, 1, 6, 0, 6, 2)>\
+
+%endif
+ddnzdisoh5 = rtB.ic40a3ky4z - rtB.ksjsftq1ct;
+rtB.pfipgc4vhl = rtP.kd * ddnzdisoh5;
+if ((rtDW.hgzgcuqa5r >= %<(SLibCG_SE(LibGetT()))>) && (rtDW.bo4ydxes1r >= %<(SLibCG_SE(LibGetT()))>)) {
+    gyqmdbpukq = 0.0;
+} else {
+    gyqmdbpukq = rtDW.hgzgcuqa5r;
+    lastU = &rtDW.dc1joadreg;
+    if (rtDW.hgzgcuqa5r < rtDW.bo4ydxes1r) {
+        if (rtDW.bo4ydxes1r < %<(SLibCG_SE(LibGetT()))>) {
+            gyqmdbpukq = rtDW.bo4ydxes1r;
+            lastU = &rtDW.bksh4qsjg2;
+        }
+    } else if (rtDW.hgzgcuqa5r >= %<(SLibCG_SE(LibGetT()))>) {
+        gyqmdbpukq = rtDW.bo4ydxes1r;
+        lastU = &rtDW.bksh4qsjg2;
+    }
+    gyqmdbpukq = (rtB.pfipgc4vhl - *lastU) / (%<(SLibCG_SE(LibGetT()))> - gyqmdbpukq);
+}
+nxewyesg5z = ((rtP.kp * ddnzdisoh5 + rtX.c3mjdfgfc3) + gyqmdbpukq) + nkm02eancy;
+rtB.nw2m2umewh = rtP.ki * ddnzdisoh5;
+if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+%<tlcOutputsFcnOfS2B16>\
+}
+hjv234vjiv = rtP.Gain_Gain * nxewyesg5z;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,3)
+%<SLibCGIRAccessLocalVar(39, 0, "")> %% nxewyesg5z
+%endif
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,4)
+%<SLibCGIRAccessLocalVar(40, 0, "")> %% hjv234vjiv
+%endif
+
+%<SLibCGIRGenReusableSysCall("makpxgzl4j", ["%<_modelSS>", "rtB.auftxpgoho", "rtP._Value", "nxewyesg5z", "hjv234vjiv", "rtP.Constant_Value", "rtP.Constant1_Value", "rtP.Constant2_Value", "&rtB.piixa31gb1"], 1, 0, 6, 0, 6, 2)>\
+
+%endif
+if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+%<tlcOutputsFcnOfS2B18>\
+}
+gglngcp11h = rtP.Gain_Gain_irbaz43gud * ag41fomznv;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,3)
+%<SLibCGIRAccessLocalVar(31, 0, "")> %% ag41fomznv
+%endif
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,4)
+%<SLibCGIRAccessLocalVar(41, 0, "")> %% gglngcp11h
+%endif
+
+%<SLibCGIRGenReusableSysCall("makpxgzl4j", ["%<_modelSS>", "rtB.bcruwxvgqg", "rtP._Value_oayr5juvkv", "ag41fomznv", "gglngcp11h", "rtP.Constant_Value_maeni3njql", "rtP.Constant1_Value_jqzxbewhqx", "rtP.Constant2_Value_exjwaxjhcq", "&rtB.a3eyo3a2sc"], 1, 1, 6, 0, 6, 2)>\
+
+%endif
+if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+%<tlcOutputsFcnOfS2B20>\
+}
+kxuzqeoz1t = rtP.Gain_Gain_pcpqquxfcl * iqgeo3lw1h;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,3)
+%<SLibCGIRAccessLocalVar(21, 0, "")> %% iqgeo3lw1h
+%endif
+%if SLibCG_SystemFcnArgAccessed("makpxgzl4j",1,4)
+%<SLibCGIRAccessLocalVar(42, 0, "")> %% kxuzqeoz1t
+%endif
+
+%<SLibCGIRGenReusableSysCall("makpxgzl4j", ["%<_modelSS>", "rtB.iyvvk41hg5", "rtP._Value_egr1tn4q2z", "iqgeo3lw1h", "kxuzqeoz1t", "rtP.Constant_Value_a135evdloz", "rtP.Constant1_Value_fgyxvvitry", "rtP.Constant2_Value_cm2c0avpfj", "&rtB.eira4itmbd"], 1, 2, 6, 0, 6, 2)>\
+
+%endif
+if (%<(SLibCGIRIsSampleHit(2, 2))>) {
+    c1c3ifqvzj = (uint8_T)((uint32_T)c1c3ifqvzj + rtP.FixPtConstant_Value);
+    if (c1c3ifqvzj > rtP.LimitedCounter_uplimit) {
+        rtB.anpaqhbdu3 = rtP.Constant_Value_j0o3ziwz4m;
+    } else {
+        rtB.anpaqhbdu3 = c1c3ifqvzj;
+    }
+}
+if (%<(SLibCGIRIsSampleHit(3, 2))>) {
+    c1c3ifqvzj = (uint8_T)((uint32_T)rtDW.gwytndyxrb + rtP.FixPtConstant_Value_fx2u5nfyst);
+    if (c1c3ifqvzj > rtP.LimitedCounter_uplimit_d3opwq24dj) {
+        rtB.lxovv4jy5x = rtP.Constant_Value_lpwc5scphm;
+    } else {
+        rtB.lxovv4jy5x = c1c3ifqvzj;
+    }
+    rtB.oqujwz0pri = rtP.RepeatingSequenceStair_OutValues[rtDW.gwytndyxrb];
+}
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 4
+%assign ::GlobalCurrentTID = 4
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+memcpy(&rtB.mfdq3temlp[0], &rtP.initialcondition_Value[0], 12U * sizeof(real_T));
+memcpy(&rtB.mtx33k1mku[0], &rtP.initialcondition_Value_csf0nu3rbw[0], 12U * sizeof(real_T));
+memcpy(&rtB.jqc23wrzcs[0], &rtP.initialcondition_Value_fvslqcrdl2[0], 12U * sizeof(real_T));
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput4LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function OutputsFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 2, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 4
+%assign ::GlobalCurrentTID = 4
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 3, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

@@ -1,0 +1,38 @@
+%implements s5_b0_8s7ke_1_Functions "C"
+
+%function fv3xdsfnd4_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+*x = muDoubleScalarSqrt(*x);
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("fv3xdsfnd4", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "fv3xdsfnd4"))
+%<SLibCG_AccessArg(1, 0, 1)>
+%endif
+%if SLibCG_ArgAccessed(1, 0, 1)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "fv3xdsfnd4", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "fv3xdsfnd4"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 0, 1)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void fv3xdsfnd4(\
+%assign comma = ""
+%<comma>real_T *x\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(1, 0, 1)
+%<comma>%<::tSimStructType> *rtS_e\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("fv3xdsfnd4", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
